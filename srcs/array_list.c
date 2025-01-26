@@ -6,10 +6,11 @@
 /*   By: sejjeong <sejjeong@student.42gyeongsan>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:34:03 by sejjeong          #+#    #+#             */
-/*   Updated: 2024/11/09 20:39:13 by sejjeong         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:08:23 by sejjeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>	
 #include <stdlib.h>
 #include "array_list.h"
 #include "libft.h"
@@ -18,8 +19,8 @@ void	init_array_list(t_array_list *list, size_t memory_offset)
 {
 	list->memory_offset = memory_offset;
 	list->count = 0;
-	list->size = 10;
-	list->list = ft_calloc(list->memory_offset, list->size);
+	list->capacity = 10;
+	list->list = ft_calloc(list->memory_offset, list->capacity);
 	list->get_count = get_count_in_list;
 	list->add = add_in_list;
 	list->clear = clear_in_list;
@@ -32,11 +33,12 @@ void	add_in_list(t_array_list *list, void *element)
 {
 	char	*p;
 	
-	if (list->count == list->size)
+	if (list->count == list->capacity)
 	{
-		list->list = ft_realloc(list->list, list->size * list->memory_offset, \
-		list->size * list->memory_offset * 2);
-		list->size *= list->memory_offset * 2;
+		list->list = ft_realloc(list->list, list->capacity * list->memory_offset, \
+		list->capacity * list->memory_offset * 2);
+		list->capacity *= 2;
+		
 		if (list->list == NULL)
 		{
 			return ;
@@ -51,10 +53,13 @@ void	add_in_list(t_array_list *list, void *element)
 void	clear_in_list(t_array_list *list, void (*del)(void *))
 {
 	do_foreach(list, del);
+	free(list->list);
+	init_array_list(list, list->memory_offset);
 }
 
-void	destroy_list(t_array_list *list)
+void	destroy_list(t_array_list *list, void (*del)(void *))
 {
+	do_foreach(list, del);
 	free(list->list);
 	list->list = NULL;
 }
