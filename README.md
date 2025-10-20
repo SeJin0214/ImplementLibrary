@@ -5,10 +5,17 @@
 
 프로젝트 진행마다 필요한 기능을 보충하였습니다.  
 
-## 대표 기능
-printf : C의 printf의 몇몇 플래그와 서식지정자를 구현  
-string_builder : C#, Java의 StringBuilder를 참고하여 구현  
-int_map : linked_list를 기반으로 map을 구현  
-
-
+## 기능 구현 목록  
+printf : C의 printf의 몇몇 플래그와 서식지정자 구현  
+deque : 원형 배열로 만든 자료구조 deque  
+string_builder : C#, Java의 StringBuilder를 참고    
+int_map : 단일 연결 리스트를 기반으로 int에 특화된 map    
+math : 벡터, 행렬, 해시 함수 생성 등 수학 연산 구현  
+list : 단일 연결 리스트  
+string : 각종 문자열 함수  
+memory : 각종 메모리 조작 함수  
+file : 한 줄 읽기 및 파일 쓰기 등  
+convert : atoi, itoa 등의 형변환 함수   
+valid : isalpha, isdigit 등 문자 체크 
+util : 간단한 확인용 assert나 swap 함수 등  
 
