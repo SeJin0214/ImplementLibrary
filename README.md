@@ -15,13 +15,13 @@
 2. 문자열 및 파일  
   string_builder : C#, Java의 StringBuilder를 참고    
   printf : C의 printf의 몇몇 플래그와 서식지정자 구현  
-  string : 각종 문자열 함수
+  string : 각종 문자열 함수  
   file : 한 줄 읽기 및 파일 쓰기 등  
 
 3. 유틸
   math : 벡터, 행렬, 해시 함수 생성 등 수학 연산 구현  
   memory : 각종 메모리 조작 함수  
   convert : atoi, itoa 등의 형변환 함수   
-  valid : isalpha, isdigit 등 문자 체크 
+  valid : isalpha, isdigit 등 문자 체크   
   util : 간단한 확인용 assert나 swap 함수 등  
 
