@@ -104,7 +104,7 @@ SRCS = $(SRC_DIR)/ft_isalpha.c \
 	$(SRC_DIR)/ivector.c \
 	$(SRC_DIR)/matrix.c \
 
-HEADER_DIR = -I .
+HEADER_DIR = -I ./includes
 
 OBJS = $(SRCS:.c=.o)
 
