@@ -8,7 +8,7 @@
 ## 기능 구현 목록  
 1. 자료구조  
   deque : 원형 배열로 만든 자료구조 deque  
-  int_map : 단일 연결 리스트를 기반으로 int에 특화된 map
+  int_map : 단일 연결 리스트를 기반으로 int에 특화된 map  
   array_list : C#, Java의 ArrayList, C++의 vector를 참고   
   list : 단일 연결 리스트  
 
