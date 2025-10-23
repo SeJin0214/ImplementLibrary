@@ -21,7 +21,7 @@
 3. 유틸  
   math : 벡터, 행렬, 해시 함수 생성 등 수학 연산 구현  
   memory : 각종 메모리 조작 함수  
-  convert : atoi, itoa 등의 형변환 함수   
+  convert : atof, atoi 등의 형변환 함수   
   valid : isalpha, isdigit 등 문자 체크   
   util : 간단한 확인용 assert나 swap 함수 등  
 
